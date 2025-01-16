@@ -1,4 +1,28 @@
-# 🚀 Getting started with Strapi
+# 🚀 IFES Solar CMS
+
+## 🛠 ️Environment Setup
+
+To run the project in development mode, it is necessary to create a `.env` file in the root of the project with the variables listed in the following `.env.example` file:
+
+```
+NODE_ENV=
+HOST=
+PORT=
+APP_KEYS=
+DATABASE_HOST=
+DATABASE_PORT=
+DATABASE_NAME=
+DATABASE_USERNAME=
+DATABASE_PASSWORD=
+JWT_SECRET=
+API_TOKEN_SALT=
+AWS_ACCESS_KEY_ID=
+AWS_ACCESS_SECRET=
+AWS_REGION=
+AWS_BUCKET_NAME=
+```
+
+## 🚀 Getting started with Strapi
 
 Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html) (CLI) which lets you scaffold and manage your project in seconds.
 
