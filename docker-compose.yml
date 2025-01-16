@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  strapi:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "1337:1337"
+    volumes:
+      - .:/usr/src/app
+    env_file:
+      - .env
+    restart: unless-stopped
+    depends_on:
+      - "postgres"
+      
+
+  postgres:
+    image: postgres:11
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./db-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: "ifes-solar"
+      POSTGRES_PASSWORD: "ifes"
+      POSTGRES_DB: "ifes-solar-cms"
